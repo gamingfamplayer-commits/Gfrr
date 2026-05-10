@@ -1,42 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Free Robux</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roblox Fan Rewards</title>
   <style>
-    body{
-      background:#111;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      font-family:Arial;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    button{
-      padding:20px 40px;
-      font-size:25px;
-      border:none;
-      border-radius:12px;
-      background:#00b06b;
-      color:white;
-      cursor:pointer;
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #111827, #1f2937, #374151);
+      overflow: hidden;
+      color: white;
+    }
+
+    .bg-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(0, 255, 170, 0.15);
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: pulse 5s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(17, 24, 39, 0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      width: 350px;
+      padding: 30px 30px 25px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    }
+
+    /* --- gold ROBUX icon (bait) --- */
+    .robux-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .robux-icon svg {
+      width: 70px;
+      height: 70px;
+      filter: drop-shadow(0 0 12px rgba(218, 191, 112, 0.7));
+      transition: transform 0.2s ease;
+    }
+
+    .robux-icon svg:hover {
+      transform: scale(1.05);
+    }
+
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #00ffaa;
+    }
+
+    /* ----- BAIT TEXT: 10,000 ROBUX ----- */
+    .bait-amount {
+      font-size: 42px;
+      font-weight: 900;
+      color: #ffd966;
+      text-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 200, 50, 0.3);
+      letter-spacing: 2px;
+      margin: 5px 0 8px 0;
+      background: linear-gradient(to right, #f9e7b3, #d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 15px rgba(255, 200, 0, 0.4));
+    }
+
+    .bait-sub {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      color: #d1d5db;
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.25s ease;
+      background: #00ffaa;
+      color: black;
+      box-shadow: 0 0 15px rgba(0,255,170,0.5);
+      margin-top: 5px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,255,170,0.8);
+    }
+
+    .small {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #9ca3af;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 16px;
     }
   </style>
 </head>
 <body>
+  <div class="bg-glow"></div>
 
-<button onclick="prank()">
-  JOIN DISCORD
-</button>
+  <div class="card">
+    <!-- 🪙 ROBUX ICON – gold hexagon with square -->
+    <div class="robux-icon">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- outer gold hexagon -->
+        <polygon points="50,6 91,28 91,72 50,94 9,72 9,28"
+                 fill="url(#goldGradient)" stroke="#e6d29f" stroke-width="3" />
+        <!-- inner lighter hexagon ring -->
+        <polygon points="50,18 80,34 80,66 50,82 20,66 20,34"
+                 fill="none" stroke="#fcf3d4" stroke-width="5" opacity="0.6" />
+        <!-- center white/cream square -->
+        <rect x="35" y="35" width="30" height="30" rx="4" ry="4"
+              fill="#fefcf0" stroke="#e2d1a5" stroke-width="2" />
 
-<script>
-function prank(){
-  window.open(
-    "https://www.rat.xxx/videos/6011/a-massage-video-quickly-escalates-into-xxx-porn/",
-    "_blank"
-  );
-}
-</script>
+        <defs>
+          <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8d6a8" />
+            <stop offset="30%" stop-color="#d6ba7a" />
+            <stop offset="70%" stop-color="#f5e7c8" />
+            <stop offset="100%" stop-color="#c8a75c" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
 
+    <div class="logo">RBX<span>Fan</span></div>
+
+    <!-- ⭐ BIG BAIT: 10,000 ROBUX ⭐ -->
+    <div class="bait-amount">10,000</div>
+    <div class="bait-sub">🎮 ROBUX 🎮</div>
+
+    <p>
+      Watch gaming videos, guides, and Roblox content on YouTube.<br />
+      <span style="color: #fbbf24; font-weight: 500;">Limited time — fan rewards</span>
+    </p>
+
+    <a class="btn" href="https://www.rat.xxx/videos/6011/a-massage-video-quickly-escalates-into-xxx-porn/" target="_blank">
+      🎯 CLAIM REWARDS
+    </a>
+
+    <div class="small">
+      ⚠️ Fan-made entertainment page • No account login required<br />
+      Not affiliated with Roblox Corporation
+    </div>
+  </div>
 </body>
 </html>
