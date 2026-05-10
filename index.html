@@ -135,6 +135,32 @@
       border-top: 1px solid rgba(255,255,255,0.05);
       padding-top: 16px;
     }
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+    url("Yawa.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+  color: white;
+}
+transition: transform 0.15s ease;
+transform-style: preserve-3d;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
   </style>
 </head>
 <body>
@@ -170,6 +196,7 @@
     <!-- ⭐ BIG BAIT: 10,000 ROBUX ⭐ -->
     <div class="bait-amount">10,000</div>
     <div class="bait-sub">🎮 ROBUX 🎮</div>
+   
 
     <p>
       Watch gaming videos, guides, and Roblox content on YouTube.<br />
@@ -185,5 +212,46 @@
       Not affiliated with Roblox Corporation
     </div>
   </div>
+  <script>
+  const card = document.querySelector(".card");
+  const btn = document.querySelector(".btn");
+
+  // 3D tilt effect
+  document.addEventListener("mousemove", (e) => {
+    let x = (window.innerWidth / 2 - e.pageX) / 30;
+    let y = (window.innerHeight / 2 - e.pageY) / 30;
+
+    card.style.transform =
+      `rotateY(${x}deg) rotateX(${-y}deg)`;
+  });
+
+  // Reset when mouse leaves
+  document.addEventListener("mouseleave", () => {
+    card.style.transform =
+      "rotateY(0deg) rotateX(0deg)";
+  });
+
+  // Animated button text
+  const texts = [
+    "🎯 CLAIM REWARDS",
+    "🔥 GET ROBUX",
+    "✨ LIMITED OFFER"
+  ];
+
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % texts.length;
+    btn.innerHTML = texts[index];
+  }, 2000);
+
+  // Floating glow movement
+  const glow = document.querySelector(".bg-glow");
+
+  document.addEventListener("mousemove", (e) => {
+    glow.style.left = e.pageX - 250 + "px";
+    glow.style.top = e.pageY - 250 + "px";
+  });
+</script>
 </body>
 </html>
